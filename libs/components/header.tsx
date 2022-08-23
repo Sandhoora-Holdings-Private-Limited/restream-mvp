@@ -22,9 +22,9 @@ export default function Header() {
         >
           {!session && (
             <>
-              <span className={styles.notSignedInText}>
+              {/* <span className={styles.notSignedInText}>
                 You are not signed in
-              </span>
+              </span> */}
               <a
                 href={`/api/auth/signin`}
                 className={styles.buttonPrimary}
@@ -39,16 +39,7 @@ export default function Header() {
           )}
           {session?.user && (
             <>
-              <span
-                style={{ backgroundImage: `url(${session.user.image})` }}
-                className={styles.avatar}
-              />
-              <span className={styles.signedInText}>
-                <small>Signed in as</small>
-                <br />
-                <strong>{session.user.email || session.user.name}</strong>
-              </span>
-              <a
+            <a
                 href={`/api/auth/signout`}
                 className={styles.button}
                 onClick={(e) => {
@@ -58,18 +49,29 @@ export default function Header() {
               >
                 Sign out
               </a>
+              
+              <span
+                style={{ backgroundImage: `url(${session.user.image})` }}
+                className={styles.avatar}
+              />
+              <span className={styles.signedInText}>
+                <small>Signed in as</small>
+                <br />
+                <strong>{session.user.name || session.user.email}</strong>
+              </span>
+              
             </>
           )}
         </p>
       </div>
-      <nav>
+      {/* <nav>
         <ul className={styles.navItems}>
           <li className={styles.navItem}>
             <Link href="/">
               <a>Home</a>
             </Link>
           </li>
-          {/* <li className={styles.navItem}>
+          <li className={styles.navItem}>
             <Link href="/client">
               <a>Client</a>
             </Link>
@@ -78,19 +80,19 @@ export default function Header() {
             <Link href="/server">
               <a>Server</a>
             </Link>
-          </li> */}
+          </li>
           <li className={styles.navItem}>
             <Link href="/protected">
               <a>Protected</a>
             </Link>
           </li>
-          {/* <li className={styles.navItem}>
+          <li className={styles.navItem}>
             <Link href="/api-example">
               <a>API</a>
             </Link>
-          </li> */}
+          </li>
         </ul>
-      </nav>
+      </nav> */}
     </header>
   )
 }
