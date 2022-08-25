@@ -1,11 +1,11 @@
 {
     "web": {
-        "client_id": "723204859715-pdulpmgkjbep1qpeld9esup5g7qhvqet.apps.googleusercontent.com",
-        "project_id": "video-streaming-app-356213",
+        "client_id": "723204859715.apps.googleusercontent.com",
+        "project_id": "video-app-356213",
         "auth_uri": "https://accounts.google.com/o/oauth2/auth",
         "token_uri": "https://oauth2.googleapis.com/token",
         "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-        "client_secret": "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",
+        "client_secret": "GOCSPX",
         "redirect_uris": [
             "http://localhost:3000/oauth"
         ],
