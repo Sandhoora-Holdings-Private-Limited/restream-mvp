@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import Studio from '../libs/components/studio'
+import Broadcast from '../libs/components/broadcast'
 import NoSsr from '../libs/components/noSSR'
 
 const Test: NextPage = () => {
@@ -8,7 +8,7 @@ const Test: NextPage = () => {
   
 
   <NoSsr>
-    <Studio/>
+    <Broadcast/>
   </NoSsr>
 
   

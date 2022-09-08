@@ -51,11 +51,11 @@ export default NextAuth({
         authorization: { params: { scope: "openid email profile https://www.googleapis.com/auth/youtube https://www.googleapis.com/auth/youtube.force-ssl" } },
         idToken: true,
         profile(profile, token) {
-          console.log('-----------profile---------------------')
-          console.log(profile)
-          console.log('-----------profile token---------------------')
+          // console.log('-----------profile---------------------')
+          // console.log(profile)
+          // console.log('-----------profile token---------------------')
 
-          console.log(token)
+          // console.log(token)
 
           return {
             id:profile.sub,
@@ -135,16 +135,17 @@ export default NextAuth({
   // https://next-auth.js.org/configuration/callbacks
   callbacks: {
     async signIn({ user, account, profile, email, credentials }) { 
+      console.log(account)
       user.access_token = account.access_token
       user.id_token = account.id_token
 
-      console.log("signIn -------------------")
-      console.log(user)
-      console.log(account)
-      console.log(profile)
-      console.log(email)
-      console.log(credentials)
-      console.log("signIn X------------------")
+      // console.log("signIn -------------------")
+      // console.log(user)
+      // console.log(account)
+      // console.log(profile)
+      // console.log(email)
+      // console.log(credentials)
+      // console.log("signIn X------------------")
 
 
 
@@ -153,23 +154,23 @@ export default NextAuth({
     async session({ session, token, user }) { 
       session.token = token
       session.otherUser = user
-      console.log("session -------------------")
+      // console.log("session -------------------")
 
-      console.log(session)
-      console.log(token)
-      console.log(user)
-      console.log("session X------------------")
+      // console.log(session)
+      // console.log(token)
+      // console.log(user)
+      // console.log("session X------------------")
 
 
       return session },
     async jwt({ token, user, account, profile, isNewUser }) { 
-      console.log("jwt -------------------")
-      console.log(token)
-      console.log(user)
-      console.log(account)
-      console.log(profile)
-      console.log(isNewUser)
-      console.log("jwt X------------------")
+      // console.log("jwt -------------------")
+      // console.log(token)
+      // console.log(user)
+      // console.log(account)
+      // console.log(profile)
+      // console.log(isNewUser)
+      // console.log("jwt X------------------")
       return token }
   },
 
@@ -179,12 +180,12 @@ export default NextAuth({
 
     async signIn({user, account, profile, isNewUser }) { 
 
-      console.log("e signIn -------------------")
-      console.log(user)
-      console.log(account)
-      console.log(profile)
-      console.log(isNewUser)
-      console.log("e signIn X------------------")
+      // console.log("e signIn -------------------")
+      // console.log(user)
+      // console.log(account)
+      // console.log(profile)
+      // console.log(isNewUser)
+      // console.log("e signIn X------------------")
 
     }
   },
