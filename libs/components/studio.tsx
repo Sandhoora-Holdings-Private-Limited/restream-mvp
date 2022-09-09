@@ -521,8 +521,8 @@ useEffect(()=>{
   if(window.gapi) {
     window.gapi.load('client:auth2', function () {
       window.gapi.auth2.init({
-        // client_id: process.env.REACT_APP_GOOGLE_CLIENT_ID,
-        client_id: "723204859715-fsgaceam14lan321btq89neniqlsrpuh.apps.googleusercontent.com",
+        client_id: process.env.REACT_APP_GOOGLE_CLIENT_ID,
+        // client_id: "723204859715-fsgaceam14lan321btq89neniqlsrpuh.apps.googleusercontent.com",
         scope: 'openid email profile https://www.googleapis.com/auth/youtube https://www.googleapis.com/auth/youtube.force-ssl',
         plugin_name:'Video Streaming App'
       })
