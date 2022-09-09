@@ -66,7 +66,7 @@ export default function Studio() {
 
 
   const productionWsUrl = 'wss://www.ohmystream.xyz/websocket'
-  const developmentWsUrl = 'http://localhost:3001/'
+  const developmentWsUrl = 'http://13.215.83.42:3001/'
 
   //!!! THIS IS THE URL I AM STREAMING TO
   const youtubeUrl = youtubeIngestionUrl + '/' + youtubeStreamName
@@ -349,7 +349,7 @@ export default function Studio() {
 
   const loadClient = () => {
     // window.gapi.client.setApiKey(process.env.REACT_APP_GOOGLE_API_KEY)
-    window.gapi.client.setApiKey("AIzaSyBYvwiPie94Ei5qEgeO715nncjjD_ZqYhU")
+    window.gapi.client.setApiKey("AIzaSyA3Ae0F03F3j4n_O9kfi7tDII4Q9A3ZNFE")
 
     
     return window.gapi.client
@@ -521,8 +521,8 @@ useEffect(()=>{
   if(window.gapi) {
     window.gapi.load('client:auth2', function () {
       window.gapi.auth2.init({
-        client_id: process.env.REACT_APP_GOOGLE_CLIENT_ID,
-        // client_id: "723204859715-fsgaceam14lan321btq89neniqlsrpuh.apps.googleusercontent.com",
+        // client_id: process.env.REACT_APP_GOOGLE_CLIENT_ID,
+        client_id: "750637712158-869f297h0ahp7e0p1jcd32g1hr9dstk7.apps.googleusercontent.com",
         scope: 'openid email profile https://www.googleapis.com/auth/youtube https://www.googleapis.com/auth/youtube.force-ssl',
         plugin_name:'Video Streaming App'
       })
