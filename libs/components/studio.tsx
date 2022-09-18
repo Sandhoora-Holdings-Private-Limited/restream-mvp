@@ -67,7 +67,7 @@ export default function Studio() {
 
   const productionWsUrl = 'wss://www.ohmystream.xyz/websocket'
   // const developmentWsUrl = 'http://13.215.83.42:3001/'
-  const developmentWsUrl = 'https://44.210.227.237.sslip.io/'
+  const developmentWsUrl = 'https://44.210.227.237.sslip.io/ws'
 
 
   //!!! THIS IS THE URL I AM STREAMING TO
