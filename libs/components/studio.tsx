@@ -66,8 +66,13 @@ export default function Studio() {
 
 
   const productionWsUrl = 'wss://www.ohmystream.xyz/websocket'
-  const developmentWsUrl = 'http://13.215.83.42:3001/'
+  // const developmentWsUrl = 'http://13.215.83.42:3001/'
   // const developmentWsUrl = 'https://reback.sandhooraholdings.lk'
+  
+  // const developmentWsUrl = 'http://localhost:3001/'
+  const developmentWsUrl = 'https://restreamsslbe.sandhooraholdings.lk/'
+
+  // https://restreamsslbe.sandhooraholdings.lk/
 
 
   //!!! THIS IS THE URL I AM STREAMING TO
